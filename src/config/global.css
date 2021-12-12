@@ -1,0 +1,19 @@
+:root {
+  --color-primary: #2E1E3C;
+  --color-secondary: #998FC7;
+  --color-violet: #51355A;
+  --color-gray-light: #4d4d4d;
+  --color-green: #21FA90;
+
+  --font-title: "Berkshire Swash", cursive;
+  --font-subtitle: "Bebas Neue", coursive;
+  --font-text: "Poppins", sans-serif;
+  
+  font-size: 60%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
