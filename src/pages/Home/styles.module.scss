@@ -59,9 +59,15 @@
         font-size: 2.2rem;
         margin-top: 5rem;
         color: var(--color-gray-light);
-        font-family: var(--font-text);
         text-align: justify;
         text-indent: 10px;
+      }
+
+      span {
+        font-size: 1.8rem;
+        margin-top: 1.0rem;
+        font-family: var(tex);
+        color: var(--color-gray-light);
       }
 
       a {
@@ -75,7 +81,6 @@
         text-decoration: none;
         color: #fff;
         font-size: 1.8rem;
-        font-family: var(--font-text);
   
         display: flex;
         align-items: center;
@@ -97,5 +102,68 @@
     }
   }
     
+  .store {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    h2 {
+      font-family: var(--font-title);
+      text-align: center;
+      font-size: 4.4rem;
+      color: var(--color-primary);
+      margin: 4rem 0rem;
+    }
+
+    .storeContainer {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      margin-bottom: 4rem;
+
+
+      .block {
+        display: flex;
+        width: 30%;
+
+        img {
+          width: 10rem;
+          height: 10rem;
+        }
+
+        .productInfo {
+          margin-left: 2rem;
+          width: 70%;
+
+          div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            h3 {
+              font-size: 2.2rem;
+              font-family: var(--font-subtitle);
+              color: var(--color-primary);
+            }
+
+            span {
+              font-size: 2.2rem;
+              font-weight: 600;
+              color: var(--color-secondary);
+            }
+          }
+
+          p {
+            font-size: 1.6rem;
+            color: var(--color-gray-light);
+          }
+
+        }
+      }
+    }
+  }
 }

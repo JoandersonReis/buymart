@@ -17,3 +17,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+p, span, a {
+  font-family: var(--font-text);
+}
+
+h1 {
+  font-family: var(--font-title);
+}
