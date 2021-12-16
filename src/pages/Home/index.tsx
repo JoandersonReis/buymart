@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { FaPercent } from "react-icons/fa"
+
 import { Header } from "../../components/Header";
+import { Item } from "../../components/Item"
 
 import welcomeImg from "../../assets/images/welcome-image.jpg"
 import hatImg from "../../assets/images/hat.jpg"
@@ -9,6 +11,7 @@ import pantsImg from "../../assets/images/pants.jpg"
 import shoesImg from "../../assets/images/shoes.jpg"
 
 import styles from "./styles.module.scss"
+import { Button } from "../../components/Button";
 
 
 function Home() {
@@ -32,72 +35,67 @@ function Home() {
 
           <span>Testados e aprovados pela confederação do atendimento, e com expansão em breve no exterior.</span>
 
-          <Link to="/about">Saiba mais</Link>
+          <Button to="/about" name="Saiba mais" />
         </main>
 
         <img src={welcomeImg} alt="Roupas Buymart" />
       </section>
 
       <section className={styles.store}>
-        <h2>Loja</h2>
+        <h2>Destaques</h2>
         <div className={styles.storeContainer}>
-          <div className={styles.block}>
-            <img src={hatImg} alt="Chapéu vendido na Buymart" />
+          <Item 
+            image={hatImg} 
+            price="40,00" 
+            name="Chapéu de praia" 
+            description="Chapéu muito confortável feito de material cromado." 
+          />
 
-            <div className={styles.productInfo}>
-              <div>
-                <h3>Chapéu de praia</h3>
-
-                <span>R$ 40,00</span>
-              </div>
-
-              <p>Chapéu muito confortável feito de material cromado.</p>
-            </div>
-          </div>
-
-          <div className={styles.block}>
-            <img src={tshirtImg} alt="T-Shirt branca vendida na Buymart" />
-
-            <div className={styles.productInfo}>
-              <div>
-                <h3>Camiseta Branca</h3>
-
-                <span>R$ 60,00</span>
-              </div>
-
-              <p>Camiseta branca de algodão para estampas.</p>
-            </div>
-          </div>
+          <Item 
+            image={tshirtImg} 
+            price="60,00" 
+            name="Camiseta Branca" 
+            description="Camiseta branca de algodão para estampas." 
+          />
         </div>
 
         <div className={styles.storeContainer}>
-          <div className={styles.block}>
-            <img src={pantsImg} alt="Calças jeans vendidas na Buymart" />
+          <Item 
+            image={pantsImg} 
+            price="160,00" 
+            name="Calça Jeans" 
+            description="Calças Jeans de cor variada e de boa qualidade." 
+          />
 
-            <div className={styles.productInfo}>
-              <div>
-                <h3>Calça Jeans</h3>
+          <Item 
+            image={shoesImg} 
+            price="190,00" 
+            name="Tênis Esportivo" 
+            description="Tênis esportivo ótimo para corridas e muito resistente." 
+          />
+        </div>
 
-                <span>R$ 199,00</span>
-              </div>
+        <Button to="/store" name="Veja mais" />
+      </section>
 
-              <p>Calças Jeans de cor variada e de boa qualidade</p>
-            </div>
-          </div>
 
-          <div className={styles.block}>
-            <img src={shoesImg} alt="Tênis esportivo vendido na Buymart" />
+      <section className={styles.news}>
+        <div className={styles.block}>
+          <FaPercent size={74} color="#998FC7" /> <br/>
 
-            <div className={styles.productInfo}>
-              <div>
-                <h3>Tênis Esportivo</h3>
+          <span>Venha conferir toda sexta</span>
 
-                <span>R$ 250,00</span>
-              </div>
+          <h2>Promoções com até 50% de desconto</h2>
 
-              <p>Tênis esportivo ótimo para corridas e muito resistente.</p>
-            </div>
-          </div>
+          <p>Promoções em sapatos, camisetas, bolsas e muito mais. Não perca nossas íncriveis promoções!</p>
+
+          <Button name="Venha conferir" to="/news" />
+        </div>
+      </section>
+
+      <section className={styles.comments}>
+        <div className="block">
+          <h2>Depoimentos</h2>
         </div>
       </section>
     </section>
